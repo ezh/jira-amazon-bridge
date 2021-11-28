@@ -1,0 +1,28 @@
+{
+  "Resources": {
+    "userOpenSearch": {
+      "Type": "AWS::Cognito::UserPoolUser",
+      "Properties": {
+        "DesiredDeliveryMediums": [
+          "EMAIL"
+        ],
+        "UserAttributes": [
+          {
+            "Name": "email_verified",
+            "Value": "true"
+          },
+          {
+            "Name": "name",
+            "Value": "${user_name}"
+          },
+          {
+            "Name": "email",
+            "Value": "${user_mail}"
+          }
+        ],
+        "Username": "${user_mail}",
+        "UserPoolId": "${user_pool_id}"
+      }
+    }
+  }
+}
