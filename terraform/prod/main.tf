@@ -30,7 +30,7 @@ module "opensearch_users" {
   cognito_user_pool_id = module.opensearch.aws_cognito_user_pool.id
   name                 = "alexeydemo"
   service_password     = var.service_password
-  user_mails           = ["alexey@naviteq.io"]
+  user_mails           = ["alexey@naviteq.io", "alex@naviteq.io", "elad@naviteq.io"]
 }
 
 module "lambda_bridge" {

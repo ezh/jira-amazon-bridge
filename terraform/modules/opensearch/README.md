@@ -42,6 +42,7 @@ No modules.
 | [aws_iam_role_policy.cognito_authenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_role_policy.cognito_unauthenticated](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_role_policy_attachment.cognito_for_opensearch](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_lambda_permission.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_permission) | resource |
 | [aws_route53_record.cert_validation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record) | resource |
 | [aws_route53_record.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record) | resource |
 | [null_resource.opensearch_service_linked_role](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
@@ -62,6 +63,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_custom_messages_lambda"></a> [custom\_messages\_lambda](#input\_custom\_messages\_lambda) | Cognito custom messages lambda | `any` | n/a | yes |
 | <a name="input_hosted_zone_id"></a> [hosted\_zone\_id](#input\_hosted\_zone\_id) | OpenSearch DNS hosted zone id | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of the deployment | `string` | n/a | yes |
 | <a name="input_opensearch_data_instance_count"></a> [opensearch\_data\_instance\_count](#input\_opensearch\_data\_instance\_count) | n/a | `number` | `0` | no |

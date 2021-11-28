@@ -17,9 +17,10 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_lambda_bridge"></a> [lambda\_bridge](#module\_lambda\_bridge) | ../modules/lambda_bridge | n/a |
+| <a name="module_lambda_cognito"></a> [lambda\_cognito](#module\_lambda\_cognito) | ../modules/lambda_cognito | n/a |
 | <a name="module_opensearch"></a> [opensearch](#module\_opensearch) | ../modules/opensearch | n/a |
-| <a name="module_opensearch-connector"></a> [opensearch-connector](#module\_opensearch-connector) | ../modules/connector | n/a |
-| <a name="module_opensearch-users"></a> [opensearch-users](#module\_opensearch-users) | ../modules/opensearch-users | n/a |
+| <a name="module_opensearch_users"></a> [opensearch\_users](#module\_opensearch\_users) | ../modules/opensearch-users | n/a |
 
 ## Resources
 

@@ -1,9 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-# Atlassian JIRA -> Amazon OpenSearch bridge
-
-creates
-* lambda function
-* trigger
+Cognito custom\_message handler
 
 ## Requirements
 
@@ -25,14 +21,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_cloudwatch_event_rule.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) | resource |
-| [aws_cloudwatch_event_target.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target) | resource |
 | [aws_cloudwatch_log_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_iam_policy.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_role.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
 | [aws_iam_role_policy_attachment.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_lambda_function.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
-| [aws_lambda_permission.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_permission) | resource |
 | [null_resource.pip_install](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [archive_file.python](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
 | [archive_file.this](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
@@ -43,17 +36,16 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_atlassian_host"></a> [atlassian\_host](#input\_atlassian\_host) | Atlassian JIRA URL | `string` | n/a | yes |
-| <a name="input_atlassian_password"></a> [atlassian\_password](#input\_atlassian\_password) | Atlassian JIRA password | `string` | n/a | yes |
-| <a name="input_atlassian_user"></a> [atlassian\_user](#input\_atlassian\_user) | Atlassian JIRA user | `string` | n/a | yes |
+| <a name="input_dashboard_link"></a> [dashboard\_link](#input\_dashboard\_link) | HREF to dashboard | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of the deployment | `string` | n/a | yes |
-| <a name="input_nproc"></a> [nproc](#input\_nproc) | number of parallel routines in lambda | `number` | n/a | yes |
-| <a name="input_opensearch_endpoint"></a> [opensearch\_endpoint](#input\_opensearch\_endpoint) | OpenSearch endpoint | `string` | n/a | yes |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | AWS resources name common prefix | `string` | `"workload-"` | no |
-| <a name="input_schedule"></a> [schedule](#input\_schedule) | n/a | `string` | `"Lambda EventBridge cron expressions"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(any)` | `{}` | no |
+| <a name="input_tasks_link"></a> [tasks\_link](#input\_tasks\_link) | HREF to tasks report | `string` | n/a | yes |
+| <a name="input_time_link"></a> [time\_link](#input\_time\_link) | HREF to time tracking report | `string` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_lambda_cognito"></a> [lambda\_cognito](#output\_lambda\_cognito) | lambda cognito attributes |
 <!-- END_TF_DOCS -->

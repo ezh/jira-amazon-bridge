@@ -1,3 +1,6 @@
+/*
+ * Cognito custom_message handler
+ */
 
 locals {
   function_name        = "${var.prefix}${var.name}-cognito"
