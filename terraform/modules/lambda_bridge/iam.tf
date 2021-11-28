@@ -1,5 +1,5 @@
 resource "aws_iam_role" "this" {
-  name = "${var.prefix}${var.name}-lambda-execution-role"
+  name = "${var.prefix}${var.name}-lambda-bridge-role"
   path = "/${var.prefix}${var.name}/"
 
   assume_role_policy = jsonencode({
@@ -20,7 +20,7 @@ resource "aws_iam_role" "this" {
 }
 
 resource "aws_iam_policy" "this" {
-  name = "${var.prefix}${var.name}-lambda-execution-role"
+  name = "${var.prefix}${var.name}-lambda-bridge-role"
   path = "/${var.prefix}${var.name}/"
   policy = jsonencode({
     Version = "2012-10-17"

@@ -86,21 +86,10 @@ python-versions = ">=3.5.0"
 unicode_backport = ["unicodedata2"]
 
 [[package]]
-name = "click"
-version = "8.0.3"
-description = "Composable command line interface toolkit"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-colorama = {version = "*", markers = "platform_system == \"Windows\""}
-
-[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -165,14 +154,6 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
-name = "importmagic3"
-version = "0.2.0"
-description = "Fork of Python Import Magic - automagically add, remove and manage imports."
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
 name = "ipdb"
 version = "0.13.9"
 description = "IPython-enabled pdb"
@@ -221,7 +202,7 @@ test = ["nose (>=0.10.1)", "requests", "testpath", "pygments", "nbformat", "ipyk
 name = "jedi"
 version = "0.18.1"
 description = "An autocompletion tool for Python that can be used for text editors."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -239,14 +220,6 @@ description = "JSON Matching Expressions"
 category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[[package]]
-name = "log-colorizer"
-version = "1.8.6"
-description = "A color formater for python logging"
-category = "main"
-optional = false
-python-versions = "*"
 
 [[package]]
 name = "matplotlib-inline"
@@ -296,7 +269,7 @@ requests = ["requests (>=2.4.0,<3.0.0)"]
 name = "parso"
 version = "0.8.2"
 description = "A Python Parser"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -406,14 +379,6 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 six = ">=1.5"
 
 [[package]]
-name = "python-magic"
-version = "0.4.24"
-description = "File type identification using libmagic"
-category = "main"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-
-[[package]]
 name = "pyyaml"
 version = "6.0"
 description = "YAML parser and emitter for Python"
@@ -474,17 +439,6 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
-name = "spark-parser"
-version = "1.8.9"
-description = "An Earley-Algorithm Context-free grammar Parser Toolkit"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-click = "*"
-
-[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -502,18 +456,6 @@ python-versions = ">=3.7"
 
 [package.extras]
 test = ["pytest"]
-
-[[package]]
-name = "uncompyle6"
-version = "3.8.0"
-description = "Python cross-version byte-code decompiler"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-spark-parser = ">=1.8.9,<1.9.0"
-xdis = ">=6.0.2,<6.1.0"
 
 [[package]]
 name = "urllib3"
@@ -555,37 +497,10 @@ category = "dev"
 optional = false
 python-versions = "*"
 
-[[package]]
-name = "wdb"
-version = "3.3.0"
-description = "An improbable web debugger through WebSockets (client only)"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-importmagic3 = "*"
-jedi = ">=0.9.0"
-log_colorizer = ">=1.8.3"
-python-magic = ">=0.4.15"
-uncompyle6 = "*"
-
-[[package]]
-name = "xdis"
-version = "6.0.3"
-description = "Python cross-version byte-code disassembler and marshal routines"
-category = "main"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-click = "*"
-six = ">=1.10.0"
-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "25eb3eba370bdc8a7d9090cd2eed203155742ba297578871a0dde45c0d997c05"
+content-hash = "923ddb5164cdd7ff1b3c16cbf72b9d4fabc3d68160fff33b73492be87e40a777"
 
 [metadata.files]
 appnope = [
@@ -620,10 +535,6 @@ charset-normalizer = [
     {file = "charset-normalizer-2.0.8.tar.gz", hash = "sha256:735e240d9a8506778cd7a453d97e817e536bb1fc29f4f6961ce297b9c7a917b0"},
     {file = "charset_normalizer-2.0.8-py3-none-any.whl", hash = "sha256:83fcdeb225499d6344c8f7f34684c2981270beacc32ede2e669e94f7fa544405"},
 ]
-click = [
-    {file = "click-8.0.3-py3-none-any.whl", hash = "sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3"},
-    {file = "click-8.0.3.tar.gz", hash = "sha256:410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b"},
-]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
@@ -652,9 +563,6 @@ idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
-importmagic3 = [
-    {file = "importmagic3-0.2.0.tar.gz", hash = "sha256:b4ab36e1a9003b01dfbbac97b78201df1ae413d7f4c8eaf09f40423c720f8b46"},
-]
 ipdb = [
     {file = "ipdb-0.13.9.tar.gz", hash = "sha256:951bd9a64731c444fd907a5ce268543020086a697f6be08f7cc2c9a752a278c5"},
 ]
@@ -669,9 +577,6 @@ jedi = [
 jmespath = [
     {file = "jmespath-0.10.0-py2.py3-none-any.whl", hash = "sha256:cdf6525904cc597730141d61b36f2e4b8ecc257c420fa2f4549bac2c2d0cb72f"},
     {file = "jmespath-0.10.0.tar.gz", hash = "sha256:b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9"},
-]
-log-colorizer = [
-    {file = "log_colorizer-1.8.6.tar.gz", hash = "sha256:cff6a54eb213560ded0e3f62319a1a950aea8dc88557c97612607dd7380eccc2"},
 ]
 matplotlib-inline = [
     {file = "matplotlib-inline-0.1.3.tar.gz", hash = "sha256:a04bfba22e0d1395479f866853ec1ee28eea1485c1d69a6faf00dc3e24ff34ee"},
@@ -733,10 +638,6 @@ python-dateutil = [
     {file = "python-dateutil-2.8.2.tar.gz", hash = "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86"},
     {file = "python_dateutil-2.8.2-py2.py3-none-any.whl", hash = "sha256:961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"},
 ]
-python-magic = [
-    {file = "python-magic-0.4.24.tar.gz", hash = "sha256:de800df9fb50f8ec5974761054a708af6e4246b03b4bdaee993f948947b0ebcf"},
-    {file = "python_magic-0.4.24-py2.py3-none-any.whl", hash = "sha256:4fec8ee805fea30c07afccd1592c0f17977089895bdfaae5fec870a84e997626"},
-]
 pyyaml = [
     {file = "PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53"},
     {file = "PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:9df7ed3b3d2e0ecfe09e14741b857df43adb5a3ddadc919a2d94fbdf78fea53c"},
@@ -788,15 +689,6 @@ six = [
     {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
-spark-parser = [
-    {file = "spark_parser-1.8.9-py2-none-any.whl", hash = "sha256:ea9c25fa79206f23b2b4c233edf5ce9c17edc97b4f39a70056b31f50a2166cce"},
-    {file = "spark_parser-1.8.9-py2.4.egg", hash = "sha256:bfd887af6c68c0061fbcc2e763c961a4d82a057081afc5fa26af1a9cfc6bb372"},
-    {file = "spark_parser-1.8.9-py2.6.egg", hash = "sha256:c9914d49a46d08346b03efa85d9c1f353cf8dcb660307277ccead151a9cf22ef"},
-    {file = "spark_parser-1.8.9-py26-none-any.whl", hash = "sha256:0a6293d05e30a093273bf81eebb97443cb4b8e733c71ad6cc2b6a223b80f3aeb"},
-    {file = "spark_parser-1.8.9-py3-none-any.whl", hash = "sha256:e4d366116268010100f054ebda99b3b880c64e4b0aa3d58629ec79e6d033b077"},
-    {file = "spark_parser-1.8.9-py38-none-any.whl", hash = "sha256:0a96852dacfbe3a267bba6c9ebc1fcab8904158a5045107267e310e8d18919e5"},
-    {file = "spark_parser-1.8.9.tar.gz", hash = "sha256:a7bb97b97953fb8bf0cd8158d820b6467ef1e7f747738e82248ae4c824f1e25a"},
-]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
@@ -804,30 +696,6 @@ toml = [
 traitlets = [
     {file = "traitlets-5.1.1-py3-none-any.whl", hash = "sha256:2d313cc50a42cd6c277e7d7dc8d4d7fedd06a2c215f78766ae7b1a66277e0033"},
     {file = "traitlets-5.1.1.tar.gz", hash = "sha256:059f456c5a7c1c82b98c2e8c799f39c9b8128f6d0d46941ee118daace9eb70c7"},
-]
-uncompyle6 = [
-    {file = "uncompyle6-3.8.0-py2-none-any.whl", hash = "sha256:0314d5558a15a47d00e61b88cc1b7631717de3edc19262643ed3b581ab910396"},
-    {file = "uncompyle6-3.8.0-py2.4.egg", hash = "sha256:e8f0caaf73b71b8336ab3d1cfa8a8fe5adcdc61339d885fe8266758694bc9039"},
-    {file = "uncompyle6-3.8.0-py2.5.egg", hash = "sha256:18d731af7cf6f4d92ccbe2c787b4b0421d927b148b6d4cee7de3e9dd8bea2a57"},
-    {file = "uncompyle6-3.8.0-py2.6.egg", hash = "sha256:2528a0d6c76dde99dc2e4b3b3c0850e8f1f215e12b14c0e15dbeb2e90e76bc58"},
-    {file = "uncompyle6-3.8.0-py2.7.egg", hash = "sha256:1dabbb4278865a2c35ad14d1703ad0dba8c0d32405212d5b9acbff8cbb66b5b4"},
-    {file = "uncompyle6-3.8.0-py3.10.egg", hash = "sha256:4599d12287443e8a196c954bf73c1e5bbec2443c58ec53c7765a9420e109982e"},
-    {file = "uncompyle6-3.8.0-py3.3.egg", hash = "sha256:ab6507d506268942d4e26b903191c173da39751ef6c2019eeea71d458bdfc257"},
-    {file = "uncompyle6-3.8.0-py3.4.egg", hash = "sha256:fa9a920328bb2963ed9ed3c7dc517aeea0ac49a9ef2aed7daf7349a4f2af4645"},
-    {file = "uncompyle6-3.8.0-py3.5.egg", hash = "sha256:a8c0081074802e923b6220c0c2bd25f0011fe72ba3344bbc834fa700f870b93a"},
-    {file = "uncompyle6-3.8.0-py3.6.egg", hash = "sha256:17293ccbfdfb312f2c57a471b743e15b1f3c3d82e35f53c4c818beecaaf746ce"},
-    {file = "uncompyle6-3.8.0-py3.7.egg", hash = "sha256:cff54bcfaddc58812205591e710355646714dd08e9275bb7f0b76b41943d0a09"},
-    {file = "uncompyle6-3.8.0-py3.8.egg", hash = "sha256:908288909814f483b4c0e28a55ff112652692bd7af3dea281c0709474c8ffbc6"},
-    {file = "uncompyle6-3.8.0-py3.9.egg", hash = "sha256:30e22ca70f5472edfb1d4abf35432cf381a54c2038ad78dded67af4d6fddb2a4"},
-    {file = "uncompyle6-3.8.0-py310-none-any.whl", hash = "sha256:157261cb0b0cc91691d3795c375ea35c0d105c83ee4493ef6194f8db703c3052"},
-    {file = "uncompyle6-3.8.0-py33-none-any.whl", hash = "sha256:e0f57660972ef11a4c1da5d23ac0fe19f8ab73b73065d2a0200d71df8580dfc9"},
-    {file = "uncompyle6-3.8.0-py34-none-any.whl", hash = "sha256:a1cfd8add1e38779033dcee245f03e0c9187a75b71d83b0200a1cc1b1bc5d535"},
-    {file = "uncompyle6-3.8.0-py35-none-any.whl", hash = "sha256:7017cda7b9f1e8123899a7b7eda9a555c0ea2c7dfc7805322e7b87b3b36504e5"},
-    {file = "uncompyle6-3.8.0-py36-none-any.whl", hash = "sha256:2792b10d5ef1fe15aaf8a6240a9fd38934bdf9648362367f5bbefa87eb1525e2"},
-    {file = "uncompyle6-3.8.0-py37-none-any.whl", hash = "sha256:368f0efc3c41f0415a19e9cceee2311fb08899ab765a2113471be03a6857127e"},
-    {file = "uncompyle6-3.8.0-py38-none-any.whl", hash = "sha256:1b99fd5634baadaeb4ed4fe9b724ae056b5a2a62ee94d143425c8bfc7e7ee869"},
-    {file = "uncompyle6-3.8.0-py39-none-any.whl", hash = "sha256:c8f3efea49f38d1f5c9cc1cc4771df68c96beca7df1ac6f8251eda73fc63c38b"},
-    {file = "uncompyle6-3.8.0.tar.gz", hash = "sha256:620633618f6dfc1f3e78187e220934d78ffc639c0e39daeca1fc535aab817014"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.7-py2.py3-none-any.whl", hash = "sha256:c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"},
@@ -840,32 +708,4 @@ virtualenv = [
 wcwidth = [
     {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
     {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
-]
-wdb = [
-    {file = "wdb-3.3.0.tar.gz", hash = "sha256:a6ea079e905b5bc641ea292ca0350d2cd9b9a4fd6e4e9a0459d6a93ed857fe9a"},
-]
-xdis = [
-    {file = "xdis-6.0.3-py2-none-any.whl", hash = "sha256:8e91c864508f1bbb98ab0365b98a0dac1703fd9409be5c4869350c2a7b7add6a"},
-    {file = "xdis-6.0.3-py2.4.egg", hash = "sha256:2fddcbff21bc1a835d150a04207698bafe0ecfd963449ac8aeffb1fe21ace63a"},
-    {file = "xdis-6.0.3-py2.5.egg", hash = "sha256:ea9d5082814c4761d938c218f5cedfcd58d3227cbd419e57c06172cd137238dd"},
-    {file = "xdis-6.0.3-py2.6.egg", hash = "sha256:4e467adbac75823ebd6b65ce9c2410fb1522957209cd858bb26c64605a74e780"},
-    {file = "xdis-6.0.3-py2.7.egg", hash = "sha256:2640799aadf7585fd0933d240735c96a2a5b1e2bf8e8e832e5208c25e7a83026"},
-    {file = "xdis-6.0.3-py3.1.egg", hash = "sha256:8365c6b290dcaf8aca28ca249b91ba5b12258d6107903c4e2467e37ae10feeb3"},
-    {file = "xdis-6.0.3-py3.10.egg", hash = "sha256:ac1e482e5baec3016acf91e636f9e4462cdbc942620a76938660bf22f834bad3"},
-    {file = "xdis-6.0.3-py3.2.egg", hash = "sha256:fe912f3a5e9534fdc4d1c857f4ddd33e9eb1b27a7a66d73b88faef8ce796b747"},
-    {file = "xdis-6.0.3-py3.3.egg", hash = "sha256:b8e7c2ccc3662438591ad4e2a86246cfd56646dee4ef22ca5ddf5876f7bad5d2"},
-    {file = "xdis-6.0.3-py3.4.egg", hash = "sha256:43021b3e79598686df1a2a5487f2802df27b51260ca91de34fd199e2adf98358"},
-    {file = "xdis-6.0.3-py3.5.egg", hash = "sha256:68c6006417ddf7f255f8e4b3b0e946990dbffd23a1dea6fc0db4198659d92338"},
-    {file = "xdis-6.0.3-py3.6.egg", hash = "sha256:9de257f9cf7217bb0332e4e14120cbce68ed31347d08db6cde0db8c83e9eb982"},
-    {file = "xdis-6.0.3-py3.7.egg", hash = "sha256:174189dccc5a57149841ec9e243507bc35c335f4d3c09b86473c1ee06b18b105"},
-    {file = "xdis-6.0.3-py3.8.egg", hash = "sha256:2040ccc7daf0a276b8d89d10bfea908a74c517d6aeffd5f2b72679aa6d3282b4"},
-    {file = "xdis-6.0.3-py3.9.egg", hash = "sha256:bd32fde51e6ea935b56131623a477073bfb504e325a13acdabd8a2bff3f12075"},
-    {file = "xdis-6.0.3-py310-none-any.whl", hash = "sha256:fd7782ddc8569b8c40f994a59af935521fc8cdc0a1b0dc3fa2cef12ace50be14"},
-    {file = "xdis-6.0.3-py33-none-any.whl", hash = "sha256:e32a99911c2c549be7257758f8778dee5a62de72e1bdb0e7696414e03403b86e"},
-    {file = "xdis-6.0.3-py34-none-any.whl", hash = "sha256:0ea30d313d8ddcd4fc38305a85c49b1698471badc6fb5bc51ac5c332f4a8c451"},
-    {file = "xdis-6.0.3-py35-none-any.whl", hash = "sha256:bf5ad2d846558910f0807edeced94e119c4a27fbaea6e7d16770b7f20fbca345"},
-    {file = "xdis-6.0.3-py36-none-any.whl", hash = "sha256:d3df8c6bdaac1d93f881498516a132961c19843043fed16a39598165c02ed3e5"},
-    {file = "xdis-6.0.3-py37-none-any.whl", hash = "sha256:d30c4293f28679749cbd801ea5ab04387cdc492c6012c01345f6e2043a70652a"},
-    {file = "xdis-6.0.3-py38-none-any.whl", hash = "sha256:5ab1b6c582d7c44ebc1f2c3139277baa4ca5992093b7717a478a9205ae4f3776"},
-    {file = "xdis-6.0.3.tar.gz", hash = "sha256:97f776f1c626e6a9e3babd0c1ca5ef394e879d7027580c54ae0be873122f9ebc"},
 ]

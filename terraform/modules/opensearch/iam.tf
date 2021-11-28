@@ -159,3 +159,14 @@ resource "aws_iam_role_policy_attachment" "cognito_for_opensearch" {
   role       = aws_iam_role.cognito_for_opensearch.id
   policy_arn = "arn:aws:iam::aws:policy/AmazonESCognitoAccess"
 }
+
+####################################################################################################
+# Custom messages lambda
+####################################################################################################
+resource "aws_lambda_permission" "this" {
+  statement_id  = "AllowExecutionFromCognito"
+  action        = "lambda:InvokeFunction"
+  function_name = var.custom_messages_lambda["function_name"]
+  principal     = "cognito-idp.amazonaws.com"
+  source_arn    = aws_cognito_user_pool.this.arn
+}

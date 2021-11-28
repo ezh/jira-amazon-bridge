@@ -15,6 +15,10 @@ resource "aws_cognito_user_pool" "this" {
     allow_admin_create_user_only = true
   }
 
+  lambda_config {
+    custom_message = var.custom_messages_lambda["arn"]
+  }
+
   account_recovery_setting {
     recovery_mechanism {
       name     = "verified_email"

@@ -22,7 +22,7 @@ variable "nproc" {
 variable "service_password" {
   type        = string
   description = "Service user app@nowhere password"
-  sensitive = true
+  sensitive   = true
   validation {
     condition = var.service_password == null || (
       can(regex("[!@#$%^&*()_:;,.]+", var.service_password)) &&

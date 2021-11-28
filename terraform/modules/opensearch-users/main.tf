@@ -3,8 +3,8 @@
  *
  * creates OpenSearch users with CloudFormation helper
  */
- 
- resource "aws_cloudformation_stack" "users" {
+
+resource "aws_cloudformation_stack" "users" {
   for_each = var.user_mails
 
   name = "${var.prefix}${var.name}-user-${replace(lower(each.key), "/[^a-z]+/", "")}"

@@ -61,5 +61,9 @@ variable "opensearch_encrypt_at_rest" {
 variable "hosted_zone_id" {
   type        = string
   description = "OpenSearch DNS hosted zone id"
+}
 
+variable "custom_messages_lambda" {
+  type        = any
+  description = "Cognito custom messages lambda"
 }
